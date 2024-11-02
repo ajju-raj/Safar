@@ -12,4 +12,4 @@ const EmptyCard = ({imgSrc, message}) => {
   )
 }
 
-export default EmptyCard
+export default EmptyCard;

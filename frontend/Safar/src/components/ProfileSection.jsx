@@ -4,7 +4,7 @@ import { ChevronDown, LogOut, User, Settings } from 'lucide-react';
 const ProfileSection = ({ userInfo, onLogOut }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
-  const firstLetter = userInfo?.name?.charAt(0)?.toUpperCase() || '@';
+  const firstLetter = userInfo?.fullName?.charAt(0)?.toUpperCase() || '@';
   
   return (
     <div className="relative">
@@ -15,7 +15,7 @@ const ProfileSection = ({ userInfo, onLogOut }) => {
         <div className="w-8 h-8 rounded-full bg-purple-700 flex items-center justify-center text-white font-semibold">
           {firstLetter}
         </div>
-        <span className="text-white font-medium">{userInfo?.name || 'Ajju'}</span>
+        <span className="text-white font-medium">{userInfo?.fullName || 'Ajju'}</span>
         <ChevronDown 
           size={16} 
           className={`text-white transition-transform duration-300 ${
